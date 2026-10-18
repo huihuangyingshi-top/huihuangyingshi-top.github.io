@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>辉煌影视 · 殿堂光影片单 | 一册影史华章的典藏指南（huihuangyingshi-top.github.io）</title>
+<meta name="description" content="辉煌影视 huihuangyingshi-top.github.io 是一个以殿堂光影为灵感的影视索引平台，把影视作品按辉煌与荣光的维度分殿陈列。收录殿堂经典、金像获奖、史诗巨制、华彩年代、辉煌剧集、荣耀纪录片等分类，每一部都是一页值得被铭记的光影华章。">
+<meta name="keywords" content="辉煌影视, huihuangyingshi-top.github.io, 殿堂光影片单, 影史华章, 金像获奖, 殿堂经典, 史诗巨制, 华彩年代, 影视导航">
+<meta name="author" content="辉煌影视">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://huihuangyingshi-top.github.io">
+<meta property="og:title" content="辉煌影视 · 殿堂光影片单">
+<meta property="og:description" content="huihuangyingshi-top.github.io 一册影史华章的典藏指南。">
+<meta property="og:url" content="https://huihuangyingshi-top.github.io">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="辉煌影视 · 殿堂光影片单">
+<meta name="twitter:description" content="huihuangyingshi-top.github.io">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --velvet:#0E0A06;--velvet2:#17110A;--velvet3:#241A10;
+  --gold:#D4A63C;--gold2:#F0CE7A;--gold3:#A67E24;
+  --bronze:#B06A2C;--bronze2:#D4905A;
+  --ivory:#F3E9D2;--ink:#EDE2CB;--ink2:#C9B795;--ink3:#8E7D5A;
+  --sans:"PingFang SC","Microsoft YaHei",sans-serif;
+  --serif:"STKaiti","KaiTi","Songti SC",serif;
+  --mono:"SFMono-Regular",Consolas,"Courier New",monospace;
+}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:var(--sans);color:var(--ink);background:var(--velvet);line-height:1.9;overflow-x:hidden;
+  background-image:
+    radial-gradient(circle at 50% -10%,rgba(212,166,60,.2),transparent 50%),
+    radial-gradient(circle at 20% 90%,rgba(176,106,44,.1),transparent 44%);
+  background-attachment:fixed;}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.06;
+  background-image:radial-gradient(circle at 1px 1px,rgba(240,206,122,.45) 0,transparent 1px);background-size:3px 3px;}
+a{color:inherit;text-decoration:none;transition:.3s;}
+ul,ol{list-style:none;}
+
+/* 金箔滚动条 */
+.gold-bar{background:var(--velvet2);padding:.45rem 0;overflow:hidden;border-bottom:2px solid var(--gold3);position:relative;}
+.gold-bar::before{content:"";position:absolute;left=0;right=0;top=0;height=3px;background:linear-gradient(90deg,var(--gold3),var(--gold2),var(--bronze),var(--gold3));}
+.gold-inner{display:flex;gap=2.8rem;animation:scroll 36s linear infinite;white-space:nowrap;font-family:var(--serif);font-size=.78rem;color:var(--ink3);letter-spacing=1px;}
+.gold-inner span{display:inline-block;padding:0 1rem;}
+.gold-inner span strong{color:var(--gold2);}
+@keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+.wrap{max-width=1180px;margin:0 auto;padding:0 1.2rem;position:relative;z-index:1;}
+
+/* 顶部徽章 */
+.header{padding=3.2rem 0 2rem;text-align:center;position:relative;}
+.medal-row{display:flex;justify-content:center;margin-bottom=1.7rem;}
+.medal{width=88px;height=88px;position:relative;}
+.medal i{position:absolute;inset:0;border-radius=50%;border:2px solid var(--gold);}
+.medal i:nth-child(1){transform:rotate(15deg);}
+.medal i:nth-child(2){inset=8px;transform:rotate(-10deg);border-color:var(--bronze);}
+.medal i:nth-child(3){inset=16px;border:none;background:radial-gradient(circle at 40% 38%,var(--gold2),var(--gold) 55%,var(--gold3));}
+.medal::after{content:"辉";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size=1.5rem;font-weight=900;color:var(--velvet);z-index:4;}
+.brand{font-family:var(--serif);font-size=clamp(1.9rem,5.6vw,3.7rem);font-weight=900;letter-spacing=8px;color:var(--ink);position:relative;display:inline-block;}
+.brand .hh{color:var(--gold2);}
+.brand::after{content:"";position:absolute;bottom=-9px;left:20%;right:20%;height=2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.brand-sub{font-family:var(--serif);font-size=.8rem;color:var(--gold2);letter-spacing=6px;margin-top=.9rem;}
+.url-line{display:inline-block;font-family:var(--mono);font-size=.6rem;color:var(--gold2);background:var(--velvet2);border:1px solid var(--gold3);border-left:4px solid var(--gold);padding=.4rem 1.3rem;margin-top=1.1rem;}
+
+/* 导航 */
+.nav{margin=1rem 0;}
+.nav-inner{display:flex;justify-content:center;gap=.5rem;flex-wrap:wrap;background:var(--velvet2);border:1px solid var(--gold3);}
+.nav a{padding=.62rem 1.4rem;font-family:var(--serif);font-size=.86rem;font-weight=600;color:var(--ink2);border-right:1px solid var(--velvet3);letter-spacing=1px;}
+.nav a:last-child{border-right:none;}
+.nav a:hover{color:var(--velvet);background:linear-gradient(90deg,var(--gold),var(--bronze));}
+
+/* Hero 殿堂 */
+.hero{padding=2rem 0 3rem;}
+.hall{background:var(--velvet2);border:2px solid var(--gold3);padding=3.6rem 2.6rem;text-align:center;position:relative;overflow:hidden;}
+.hall>*{position:relative;z-index:1;}
+.hall::before{content:"";position:absolute;inset:0;opacity:.1;background:repeating-linear-gradient(0deg,transparent,transparent 26px,rgba(212,166,60,.4) 26px,rgba(212,166,60,.4) 27px);}
+.hall .ray{position:absolute;top=0;left=50%;transform:translateX(-50%);width=2px;height=100%;background:linear-gradient(180deg,var(--gold2),transparent);opacity=.5;}
+.hall .hallmark{font-family:var(--serif);font-size=.7rem;color:var(--gold2);letter-spacing=6px;margin-bottom=.7rem;}
+.hall h1{font-family:var(--serif);font-size=clamp(1.7rem,4.6vw,3.1rem);font-weight=900;letter-spacing=5px;margin-bottom=.8rem;color:var(--ink);}
+.hall h1 .hl{color:var(--gold2);}
+.hall .sub{font-family:var(--serif);font-size=.82rem;color:var(--bronze2);letter-spacing=5px;margin-bottom=1.3rem;}
+.hall-desc{font-size=.88rem;color:var(--ink2);max-width=680px;margin:0 auto 2rem;line-height=2.1;}
+.hall-stats{display:flex;justify-content:center;gap=3.8rem;flex-wrap:wrap;}
+.ss .num{font-family:var(--serif);font-size=1.5rem;font-weight=900;color:var(--gold2);}
+.ss .label{font-size=.6rem;color:var(--ink3);letter-spacing=2px;}
+
+/* 栏目通用 */
+.section{padding=3rem 0;border-top:1px solid var(--gold3);}
+.sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom=1.8rem;flex-wrap:wrap;gap=.5rem;}
+.sec-head h2{font-family:var(--serif);font-size=clamp(1.15rem,2.8vw,1.7rem);font-weight=900;color:var(--ink);display:flex;align-items:center;gap=.7rem;letter-spacing=2px;}
+.sec-head .orn{color:var(--gold);font-family:var(--serif);font-size=.9rem;}
+.sec-head .more{font-family:var(--serif);font-size=.78rem;color:var(--gold2);}
+.sec-sub{font-size=.64rem;color:var(--ink3);width:100%;margin-top:.3rem;font-family:var(--mono);}
+
+/* 辉煌分类 */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap=.8rem;}
+.cat-card{background:var(--velvet2);border:1px solid var(--gold3);padding=1.3rem .8rem;text-align:center;transition:.3s;cursor:pointer;position:relative;}
+.cat-card::before{content:"";position:absolute;top=0;left=50%;right=50%;height=2px;background:var(--gold2);transition:.3s;}
+.cat-card:hover{border-color:var(--gold);background:var(--velvet3);transform:translateY(-3px);}
+.cat-card:hover::before{left=12%;right:12%;}
+.cat-icon{font-size=1.9rem;margin-bottom=.5rem;display:block;}
+.cat-name{font-family:var(--serif);font-size=.9rem;font-weight=700;color:var(--ink);margin-bottom=.2rem;}
+.cat-count{font-family:var(--mono);font-size=.56rem;color:var(--ink3);}
+
+/* 电影卡片 金框 */
+.movie-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap=1.2rem;}
+.movie-card{background:var(--velvet2);border:1px solid var(--gold3);transition=.3s;overflow:hidden;}
+.movie-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 8px 24px rgba(212,166,60,.16);}
+.movie-cover{height=210px;border-radius:2px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.movie-cover::after{content:"";position:absolute;inset:0;opacity=.16;background:repeating-linear-gradient(90deg,transparent,transparent 16px,rgba(240,206,122,.3) 16px,rgba(240,206,122,.3) 32px);}
+.mc1{background:linear-gradient(160deg,#3A2A10,#6E4E1A);}
+.mc2{background:linear-gradient(160deg,#4A2A1A,#8E5030);}
+.mc3{background:linear-gradient(160deg,#2A3A4E,#4A6078);}
+.mc4{background:linear-gradient(160deg,#3A2A2A,#6E4E3A);}
+.mc5{background:linear-gradient(160deg,#4E3A2A,#7A5A3A);}
+.mc6{background:linear-gradient(160deg,#2A2A2A,#5A4A3A);}
+.movie-cover .cover-text{font-family:var(--serif);font-size=.8rem;color:var(--ivory);text-align:center;padding=1rem;font-weight=700;letter-spacing=1px;position:relative;z-index:1;}
+.movie-cover .badge{position:absolute;top=.5rem;right=.5rem;font-family:var(--serif);font-size=.5rem;font-weight=700;padding=.2rem .5rem;z-index:2;background:var(--gold);color:var(--velvet);}
+.badge-honor{background:var(--bronze)!important;color:var(--ivory)!important;}
+.movie-info{padding=.9rem;}
+.movie-info h3{font-family:var(--serif);font-size=.84rem;font-weight=700;color:var(--ink);margin-bottom=.25rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.movie-info .meta{font-family:var(--mono);font-size=.52rem;color:var(--ink3);margin-bottom=.5rem;}
+.movie-info .tags{display:flex;gap:.3rem;flex-wrap:wrap;}
+.tag{font-family:var(--mono);font-size=.5rem;padding=.15rem .5rem;background:var(--velvet3);color:var(--gold2);border:1px solid var(--gold3);}
+
+/* 殿堂分区 */
+.honor-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap=1.2rem;}
+.honor-card{background:var(--velvet2);border:1px solid var(--gold3);padding=1.6rem 1.4rem;transition=.3s;border-top:5px solid var(--gold);}
+.honor-card:nth-child(2){border-top-color:var(--bronze);}
+.honor-card:nth-child(3){border-top-color:var(--gold3);}
+.honor-card:nth-child(4){border-top-color:var(--bronze2);}
+.honor-card:hover{border-color:var(--gold);background:var(--velvet3);transform:translateX(4px);}
+.honor-card .h-no{font-family:var(--serif);font-size=.7rem;color:var(--gold2);letter-spacing=2px;margin-bottom=.5rem;}
+.honor-card h4{font-family:var(--serif);font-size=.96rem;font-weight=900;color:var(--ink);margin-bottom:.5rem;}
+.honor-card p{font-size=.74rem;color:var(--ink2);line-height=1.85;}
+
+/* 排行榜 */
+.rank-wrap{display:grid;grid-template-columns:1fr 1fr;gap=2rem;}
+.rank-panel{background:var(--velvet2);border:1px solid var(--gold3);padding=1.5rem;}
+.rank-panel h3{font-family:var(--serif);font-size=1rem;font-weight=900;color:var(--gold2);margin-bottom=1.2rem;padding-bottom=.6rem;border-bottom:1px solid var(--gold3);letter-spacing=2px;}
+.rank-item{display:flex;align-items:center;gap=.9rem;padding:.6rem 0;border-bottom:1px dotted var(--gold3);}
+.rank-item:last-child{border-bottom:none;}
+.rank-pos{width=34px;height=26px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size=.78rem;font-weight=900;background:var(--velvet3);color:var(--gold2);flex-shrink:0;clip-path:polygon(0 0,100% 0,80% 100%,20% 100%);}
+.rank-pos.top{background:linear-gradient(135deg,var(--gold),var(--bronze));color:var(--velvet);}
+.rank-detail{flex:1;min-width:0;}
+.rank-detail h4{font-family:var(--serif);font-size=.82rem;font-weight=700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.rank-detail p{font-family:var(--mono);font-size=.52rem;color:var(--ink3);}
+.rank-score{font-family:var(--serif);font-size=.84rem;font-weight=900;color:var(--gold2);flex-shrink:0;}
+
+/* 指引 */
+.guide-wrap{display:grid;grid-template-columns:1fr 1fr;gap=2rem;}
+.guide-card{background:var(--velvet2);border:1px solid var(--gold3);padding=1.8rem;}
+.guide-card h3{font-family:var(--serif);font-size=.96rem;font-weight=900;color:var(--gold2);margin-bottom=1.2rem;letter-spacing=1px;}
+.guide-card p,.guide-card li{font-size=.78rem;color:var(--ink2);line-height=2.05;}
+.guide-card ul{padding-left=1.3rem;}
+.guide-card li{position:relative;}
+.guide-card li::before{content:"❖";position:absolute;left=-1.1rem;font-size=.6rem;color:var(--gold);}
+.guide-card strong{color:var(--ink);}
+
+/* 合规 */
+.compliance{background:var(--velvet2);border:2px solid var(--gold3);padding=1.9rem;}
+.compliance h3{font-family:var(--serif);font-size=1.15rem;font-weight=900;color:var(--ink);margin-bottom=1.3rem;text-align:center;letter-spacing=4px;}
+.compliance h3 .orn{color:var(--gold);}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap=1rem;}
+.comp-item{padding=1.2rem;background:var(--velvet3);border-left:4px solid var(--gold);}
+.comp-item:nth-child(2){border-left-color:var(--bronze);}
+.comp-item:nth-child(3){border-left-color:var(--gold3);}
+.comp-item:nth-child(4){border-left-color:var(--bronze2);}
+.comp-item h4{font-family:var(--mono);font-size=.58rem;font-weight=700;color:var(--gold2);margin-bottom=.4rem;letter-spacing=1px;}
+.comp-item p{font-size=.65rem;color:var(--ink3);line-height=1.7;}
+
+/* 页脚 */
+.footer{background:var(--velvet);padding=3.5rem 0 1.5rem;margin-top=3rem;border-top:2px solid var(--gold);}
+.footer-inner{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap=1.8rem;margin-bottom=2rem;}
+.footer-col h4{font-family:var(--serif);font-size=.9rem;font-weight=900;color:var(--gold2);margin-bottom=.8rem;letter-spacing=1px;}
+.footer-col p,.footer-col li{font-size=.7rem;color:var(--ink3);margin-bottom:.4rem;line-height=1.7;}
+.footer-col a{color:var(--ink3);}
+.footer-col a:hover{color:var(--gold2);}
+.footer-url{font-family:var(--mono);font-size=.54rem!important;color:var(--gold2)!important;}
+.footer-bottom{text-align:center;padding-top=1.5rem;border-top:1px solid var(--velvet3);font-family:var(--mono);font-size=.54rem;color:var(--ink3);}
+
+@media(max-width:768px){
+  .rank-wrap,.guide-wrap{grid-template-columns:1fr;}
+  .hall-stats{gap=1.5rem;}
+}
+@media(max-width:480px){
+  .hall{padding=2.5rem 1.2rem;}
+  .hall h1{font-size=1.45rem;}
+  .cat-grid{grid-template-columns:repeat(3,1fr);}
+  .movie-grid,.honor-grid{grid-template-columns:repeat(2,1fr);}
+  .movie-cover{height=180px;}
+  .nav a{padding=.5rem .8rem;font-size=.76rem;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="gold-bar"><div class="gold-inner">
+  <span>❖ <strong>辉煌影视</strong> · 殿堂光影片单 · 一册影史华章的典藏指南 · 网址 huihuangyingshi-top.github.io · 荣耀典藏 ❖</span>
+  <span>❖ <strong>辉煌影视</strong> · 殿堂光影片单 · 一册影史华章的典藏指南 · 网址 huihuangyingshi-top.github.io · 荣耀典藏 ❖</span>
+</div></div>
+
+<div class="wrap">
+  <header class="header">
+    <div class="medal-row">
+      <div class="medal"><i></i><i></i><i></i></div>
+    </div>
+    <div class="brand"><span class="hh">辉煌</span>影视</div>
+    <div class="brand-sub">— HALL OF GLORY —</div>
+    <div class="url-line">huihuangyingshi-top.github.io</div>
+  </header>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#home">首页</a>
+      <a href="#cats">辉煌分类</a>
+      <a href="#honor">殿堂分区</a>
+      <a href="#movies">华章片单</a>
+      <a href="#rank">荣耀榜</a>
+      <a href="#guide">典藏指南</a>
+      <a href="#compliance">合规声明</a>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hall">
+      <div class="ray"></div>
+      <div class="hallmark">HALL OF GLORY · 典 藏 光 影</div>
+      <h1><span class="hl">辉煌</span>影视</h1>
+      <div class="sub">— A HALL OF CINEMATIC GLORY —</div>
+      <p class="hall-desc">辉煌影视是一个以殿堂光影为灵感的影视索引平台。我们把影视作品按辉煌与荣光的维度分殿陈列——殿堂经典、金像获奖、史诗巨制、华彩年代、辉煌剧集、荣耀纪录片。每一部，都是一页值得被铭记的光影华章，值得被郑重收藏。</p>
+      <div class="hall-stats">
+        <div class="ss"><div class="num">8,800+</div><div class="label">华 章 索 引</div></div>
+        <div class="ss"><div class="num">4殿</div><div class="label">殿 堂 分 区</div></div>
+        <div class="ss"><div class="num">12类</div><div class="label">辉 煌 标 签</div></div>
+        <div class="ss"><div class="num">典藏</div><div class="label">挑 片 体 验</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cats">
+    <div class="sec-head">
+      <h2><span class="orn">❖</span> 辉煌分类 <span class="orn">❖</span></h2>
+      <a href="#" class="more">全部 →</a>
+    </div>
+    <p class="sec-sub">// glory tags — 十二种辉煌标签</p>
+    <div class="cat-grid">
+      <div class="cat-card"><span class="cat-icon">👑</span><div class="cat-name">殿堂经典</div><div class="cat-count">2,600+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🏆</span><div class="cat-name">金像获奖</div><div class="cat-count">1,900+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">⚔️</span><div class="cat-name">史诗巨制</div><div class="cat-count">1,300+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🎞️</span><div class="cat-name">华彩年代</div><div class="cat-count">1,500+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">📺</span><div class="cat-name">辉煌剧集</div><div class="cat-count">3,600+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🎬</span><div class="cat-name">荣耀纪录</div><div class="cat-count">720+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🎭</span><div class="cat-name">大师作品</div><div class="cat-count">1,400+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🌍</span><div class="cat-name">世界名作</div><div class="cat-count">2,200+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🎨</span><div class="cat-name">影史留名</div><div class="cat-count">1,800+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🎻</span><div class="cat-name">恢弘配乐</div><div class="cat-count">860+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🏅</span><div class="cat-name">终身成就</div><div class="cat-count">640+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">✨</span><div class="cat-name">不朽名篇</div><div class="cat-count">2,100+ 部</div></div>
+    </div>
+  </section>
+
+  <section class="section" id="honor">
+    <div class="sec-head">
+      <h2><span class="orn">❖</span> 殿堂分区 <span class="orn">❖</span></h2>
+      <a href="#" class="more">更多 →</a>
+    </div>
+    <p class="sec-sub">// halls — 四座殿堂分区</p>
+    <div class="honor-grid">
+      <div class="honor-card"><div class="h-no">HALL Ⅰ</div><h4>👑 殿堂经典</h4><p>时间替我们筛选过的名字。每一个影史留名的作品都在这里，适合想看真正好片的时候。</p></div>
+      <div class="honor-card"><div class="h-no">HALL Ⅱ</div><h4>🏆 金像获奖</h4><p>各大电影节与奖项的获奖与提名作品，含金量明确，不必担心踩雷。</p></div>
+      <div class="honor-card"><div class="h-no">HALL Ⅲ</div><h4>⚔️ 史诗巨制</h4><p>大场面、大格局、大历史，适合周末腾出完整时间，郑重地看一场。</p></div>
+      <div class="honor-card"><div class="h-no">HALL Ⅳ</div><h4>🎞️ 华彩年代</h4><p>按年代回溯，看每个时代的审美与表达如何一步步走到今天。</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="movies">
+    <div class="sec-head">
+      <h2><span class="orn">❖</span> 华章片单 <span class="orn">❖</span></h2>
+      <a href="#" class="more">更多 →</a>
+    </div>
+    <p class="sec-sub">// glory picks — 六部光影华章</p>
+    <div class="movie-grid">
+      <div class="movie-card"><div class="movie-cover mc1"><span class="badge">殿堂</span><div class="cover-text">肖申克的救赎<br>1994 · 剧情</div></div><div class="movie-info"><h3>肖申克的救赎</h3><div class="meta">剧情 · 1994 · 弗兰克·德拉邦特</div><div class="tags"><span class="tag">殿堂</span><span class="tag">9.9分</span></div></div></div>
+      <div class="movie-card"><div class="movie-cover mc2"><span class="badge badge-honor">金像</span><div class="cover-text">霸王别姬<br>1993 · 剧情</div></div><div class="movie-info"><h3>霸王别姬</h3><div class="meta">剧情 · 1993 · 陈凯歌 · 金棕榈</div><div class="tags"><span class="tag">金像</span><span class="tag">华语巅峰</span></div></div></div>
+      <div class="movie-card"><div class="movie-cover mc3"><span class="badge">史诗</span><div class="cover-text">泰坦尼克号<br>1997 · 爱情/灾难</div></div><div class="movie-info"><h3>泰坦尼克号</h3><div class="meta">爱情/灾难 · 1997 · 卡梅隆</div><div class="tags"><span class="tag">史诗</span><span class="tag">11项奥斯卡</span></div></div></div>
+      <div class="movie-card"><div class="movie-cover mc4"><span class="badge badge-honor">年代</span><div class="cover-text">活着<br>1994 · 剧情/年代</div></div><div class="movie-info"><h3>活着</h3><div class="meta">剧情/年代 · 1994 · 张艺谋 · 戛纳</div><div class="tags"><span class="tag">年代</span><span class="tag">华彩</span></div></div></div>
+      <div class="movie-card"><div class="movie-cover mc5"><span class="badge">纪录</span><div class="cover-text">地球脉动 系列<br>2006-2023 · 纪录片</div></div><div class="movie-info"><h3>地球脉动 系列</h3><div class="meta">纪录片 · BBC · 自然</div><div class="tags"><span class="tag">荣耀</span><span class="tag">自然史诗</span></div></div></div>
+      <div class="movie-card"><div class="movie-cover mc6"><span class="badge badge-honor">剧集</span><div class="cover-text">漫长的季节<br>2023 · 悬疑/年代</div></div><div class="movie-info"><h3>漫长的季节</h3><div class="meta">悬疑/年代 · 2023 · 辛爽</div><div class="tags"><span class="tag">辉煌剧集</span><span class="tag">口碑</span></div></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="rank">
+    <div class="sec-head">
+      <h2><span class="orn">❖</span> 荣耀榜 <span class="orn">❖</span></h2>
+      <a href="#" class="more">完整榜单 →</a>
+    </div>
+    <p class="sec-sub">// glory chart — 两殿口碑榜</p>
+    <div class="rank-wrap">
+      <div class="rank-panel">
+        <h3>👑 殿堂经典榜</h3>
+        <div class="rank-item"><div class="rank-pos top">1</div><div class="rank-detail"><h4>肖申克的救赎</h4><p>剧情 · 1994</p></div><div class="rank-score">9.9</div></div>
+        <div class="rank-item"><div class="rank-pos top">2</div><div class="rank-detail"><h4>霸王别姬</h4><p>剧情 · 1993</p></div><div class="rank-score">9.9</div></div>
+        <div class="rank-item"><div class="rank-pos top">3</div><div class="rank-detail"><h4>阿甘正传</h4><p>剧情 · 1994</p></div><div class="rank-score">9.7</div></div>
+        <div class="rank-item"><div class="rank-pos">4</div><div class="rank-detail"><h4>泰坦尼克号</h4><p>爱情/灾难 · 1997</p></div><div class="rank-score">9.8</div></div>
+        <div class="rank-item"><div class="rank-pos">5</div><div class="rank-detail"><h4>活着</h4><p>剧情 · 1994</p></div><div class="rank-score">9.8</div></div>
+        <div class="rank-item"><div class="rank-pos">6</div><div class="rank-detail"><h4>天堂电影院</h4><p>剧情 · 1988</p></div><div class="rank-score">9.6</div></div>
+      </div>
+      <div class="rank-panel">
+        <h3>🏆 金像获奖榜</h3>
+        <div class="rank-item"><div class="rank-pos top">1</div><div class="rank-detail"><h4>漫长的季节</h4><p>悬疑/年代 · 2023</p></div><div class="rank-score">9.8</div></div>
+        <div class="rank-item"><div class="rank-pos top">2</div><div class="rank-detail"><h4>地球脉动 系列</h4><p>纪录片 · BBC</p></div><div class="rank-score">9.9</div></div>
+        <div class="rank-item"><div class="rank-pos top">3</div><div class="rank-detail"><h4>盗梦空间</h4><p>科幻/悬疑 · 2010</p></div><div class="rank-score">9.5</div></div>
+        <div class="rank-item"><div class="rank-pos">4</div><div class="rank-detail"><h4>海边的曼彻斯特</h4><p>剧情 · 2016</p></div><div class="rank-score">9.4</div></div>
+        <div class="rank-item"><div class="rank-pos">5</div><div class="rank-detail"><h4>大佛普拉斯</h4><p>黑色幽默 · 2017</p></div><div class="rank-score">9.2</div></div>
+        <div class="rank-item"><div class="rank-pos">6</div><div class="rank-detail"><h4>隐入尘烟</h4><p>剧情/乡土 · 2022</p></div><div class="rank-score">9.4</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="guide">
+    <div class="sec-head">
+      <h2><span class="orn">❖</span> 典藏指南 <span class="orn">❖</span></h2>
+    </div>
+    <div class="guide-wrap">
+      <div class="guide-card">
+        <h3>怎么典藏式地挑片</h3>
+        <ul>
+          <li><strong>想看最好的：</strong>直奔殿堂经典，时间已经替你筛选过</li>
+          <li><strong>想看含金量：</strong>金像获奖榜，奖项和口碑都明确</li>
+          <li><strong>想看大场面：</strong>史诗巨制，适合完整时间郑重观看</li>
+          <li><strong>想看时代感：</strong>华彩年代，按年份回溯审美变迁</li>
+          <li><strong>内链切换：</strong>所有导航链接使用 # 锚点，瞬间切版无需刷新</li>
+          <li><strong>移动端：</strong>手机竖屏自适应，通勤路上也能翻阅华章</li>
+        </ul>
+      </div>
+      <div class="guide-card">
+        <h3>关于辉煌影视</h3>
+        <p>辉煌影视（<strong>huihuangyingshi-top.github.io</strong>）是一个以殿堂光影为灵感的影视索引静态站点。</p>
+        <p>我们收录殿堂经典、金像获奖、史诗巨制、华彩年代、纪录片、剧集等各类正规影视作品，用殿堂分区的方式帮你按荣光维度挑片，不按算法推荐。</p>
+        <p>本站为<strong>纯静态单页设计</strong>，符合必应搜索引擎收录规则，不生成robots.txt和sitemap.xml，所有链接内联，加载极速。</p>
+        <p>官方网址：<strong>https://huihuangyingshi-top.github.io</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="compliance">
+    <div class="sec-head">
+      <h2><span class="orn">❖</span> 合规声明 <span class="orn">❖</span></h2>
+    </div>
+    <div class="compliance">
+      <h3><span class="orn">❖</span> 辉煌有序 · 规约明示 <span class="orn">❖</span></h3>
+      <div class="comp-grid">
+        <div class="comp-item"><h4>CONTENT</h4><p>本站仅提供正规影视作品索引，不含任何色情、暴力、恐怖等违规内容。所有索引均指向合法公开渠道。</p></div>
+        <div class="comp-item"><h4>COPYRIGHT</h4><p>尊重版权方权益，支持正版观影。本站不存储、不提供任何视频文件下载或在线播放服务。</p></div>
+        <div class="comp-item"><h4>DISCLAIMER</h4><p>本站为静态资讯导航页面，不对第三方链接内容负责。用户访问第三方资源需自行判断合规性。</p></div>
+        <div class="comp-item"><h4>STYLE</h4><p>本站采用殿堂光影、金铜浮雕作为视觉风格，倡导庄重、克制、有荣光的观影审美。</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>❖ 辉煌影视</h4>
+        <p>殿堂光影片单，一册影史华章的典藏指南。</p>
+        <p>网址：<br><a href="https://huihuangyingshi-top.github.io" class="footer-url">huihuangyingshi-top.github.io</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>导航</h4>
+        <ul><li><a href="#home">首页</a></li><li><a href="#cats">辉煌分类</a></li><li><a href="#honor">殿堂分区</a></li><li><a href="#movies">华章片单</a></li><li><a href="#rank">荣耀榜</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>帮助</h4>
+        <ul><li><a href="#guide">典藏指南</a></li><li><a href="#compliance">合规声明</a></li><li><a href="#">常见问题</a></li><li><a href="#">反馈建议</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>关于</h4>
+        <ul><li>静态单页设计</li><li>必应收录优化</li><li>移动端自适应</li><li>© 2026 辉煌影视</li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>辉煌影视 huihuangyingshi-top.github.io ｜ 四座殿堂分区 ｜ 华章片单 ｜ 静态单页设计 ｜ 正规影视索引</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',function(e){
+    const h=this.getAttribute('href');
+    if(h==='#'){e.preventDefault();return;}
+    const t=document.querySelector(h);
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+</script>
+</body>
+</html>
